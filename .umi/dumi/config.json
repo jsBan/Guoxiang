@@ -1,0 +1,60 @@
+{
+  "menus": {
+    "en-US": {
+      "*": [
+        {
+          "path": "/",
+          "title": "Hello dumi!",
+          "meta": {}
+        },
+        {
+          "path": "/getting-started",
+          "title": "Getting Started",
+          "meta": {}
+        },
+        {
+          "path": "/help",
+          "title": "Help",
+          "meta": {}
+        }
+      ]
+    },
+    "zh-CN": {
+      "*": [
+        {
+          "path": "/zh-CN",
+          "title": "Hello dumi!",
+          "meta": {}
+        },
+        {
+          "path": "/zh-CN/getting-started",
+          "title": "快速上手",
+          "meta": {}
+        },
+        {
+          "path": "/zh-CN/help",
+          "title": "帮助",
+          "meta": {}
+        }
+      ]
+    }
+  },
+  "locales": [
+    {
+      "name": "en-US",
+      "label": "English"
+    },
+    {
+      "name": "zh-CN",
+      "label": "中文"
+    }
+  ],
+  "navs": {},
+  "title": "dumi-app",
+  "mode": "doc",
+  "repository": {
+    "url": "",
+    "branch": "master"
+  },
+  "theme": {}
+}

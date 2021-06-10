@@ -12,9 +12,11 @@ cache:  
 
 install:   
   # - npm install 
+  -yarn
 
 script:   
-  - dumi build
+  -dumi dev
+  # - dumi build
   # - hexo clean   
   # - hexo g 
 
