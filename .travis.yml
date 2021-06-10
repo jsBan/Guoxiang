@@ -12,17 +12,17 @@ cache:  
 
 install:   
   # - npm install 
-  -yarn
+  # -yarn
 
 script:   
-  -dumi dev
-  # - dumi build
+  # -dumi dev
+  - dumi build
   # - hexo clean   
   # - hexo g 
 
 after_script:   
 # 最后执行的命令   
-  # - cd ./public   
+  - cd ./dist   
   - git init   
   - git config user.name "jsBan"   
   - git config user.email "1786295283@qq.com"   
