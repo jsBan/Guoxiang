@@ -1,0 +1,37 @@
+language: node_js 
+encoding: UTF-8
+os: osx
+
+#要安装的node版本为当前的稳定版 
+node_js: stable  
+
+cache:   
+  directories:   
+  # 要缓存的文件夹 
+  - node_modules 
+
+install:   
+  # - npm install 
+
+script:   
+  - dumi build
+  # - hexo clean   
+  # - hexo g 
+
+after_script:   
+# 最后执行的命令   
+  # - cd ./public   
+  - git init   
+  - git config user.name "jsBan"   
+  - git config user.email "1786295283@qq.com"   
+  - git add .    
+  - git commit -m "代码是自动部署的哈"   
+  - git push --force --quiet "https://${Guoxiang}@${GH_REF}" master:Gx-pages 
+
+branches:   
+  only:     
+    - master # 触发持续集成的分支 
+
+env:  
+  global:    
+    - GH_REF: github.com/jsBan/Guoxiang.git # 就是你github上存放静态博客最终文件的仓库地址末尾加上.git
