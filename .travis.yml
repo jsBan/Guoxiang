@@ -12,18 +12,29 @@ cache:  
   # 要缓存的文件夹 
   - node_modules 
 
-install:   
-  # - npm install 
+install:
+  - npm install 
   # -yarn
 
-script:   
+# script:   
   # -dumi dev
-  - dumi build
+  # - dumi build
   # - hexo clean   
   # - hexo g 
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version version-number
-  - export PATH="$HOME/.yarn/bin:$PATH"
+script:
+  - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
+
+
+# before_install:
+#   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version version-number
+#   - export PATH="$HOME/.yarn/bin:$PATH"
 after_script:   
 # 最后执行的命令   
   - cd ./dist   
